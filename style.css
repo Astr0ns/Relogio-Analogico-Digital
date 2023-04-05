@@ -1,0 +1,113 @@
+* {
+
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body {   
+ background-color: beige;  
+    
+}
+
+.titulos{
+    text-align: center;
+    margin: 2rem;
+}
+
+.clock {
+    margin-top: 10rem;
+    background-color: #282828;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border: 6px solid #282828;
+    border-radius: 50%;
+    box-shadow: -8px -8px 12px rgba(67, 67, 67, 0.4),
+      inset 8px 8px 12px rgba(0, 0, 0, 0.3),
+      inset -8px -8px 12px rgba(67, 67, 67, 0.4), 8px 8px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.time {
+    background-color: rgb(80, 80, 80);
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border: 2px rgb(80, 80, 80) solid;
+    border-radius: 50px;
+    box-shadow:-8px -8px 12px rgba(67, 67, 67, 0.4),
+    inset 8px 8px 12px rgba(0, 0, 0, 0.3),
+    inset -8px -8px 12px rgba(67, 67, 67, 0.4), 8px 8px 12px rgba(0, 0, 0, 0.3);
+    width: 8rem;
+    height: 2rem;
+    top: 16rem;
+    left: 1rem;
+    padding: 20px;
+    transform: translateY(-50%);
+}
+
+.minute {
+    position: absolute;
+    width: 48%;
+    height: 4px;
+    background: white;
+    transform-origin: 100%;
+    top: 50%;
+    left: 2%;
+    transform: translate(-50%, -50%);
+}
+.second{
+    content: "";
+    position: absolute;
+    background: red;
+    width: 45%;
+    height: 2px;
+    top: 50%;
+    left: 5%;
+    transform-origin: 100%;
+    transform: translate(-50%, -50%);
+}
+.hour{
+    position: absolute;
+    background: white;
+    width: 30%;
+    height: 3px;
+    top: 50%;
+    left: 20%;
+    transform-origin: 100%;
+    transform: translate(-50%, -50%);
+}
+
+  
+.hour {
+    z-index: 3;
+}
+  
+.minute {
+    z-index: 2;
+}
+  
+.second {
+    z-index: 1;
+}
+  
+  /* Center dot */
+.clock::before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
