@@ -1,9 +1,9 @@
 function setTime() {
 
     const now = new Date();
-    const hours = now.getHours();
-    const minutes = now.getMinutes();
-    const seconds = now.getSeconds();
+    const hours = now.getHours();//utiliza as horas que está no dispositivo
+    const minutes = now.getMinutes();//utiliza os minutos que está no dispositivo
+    const seconds = now.getSeconds();//utiliza os segundos que está no dispositivo
   
     const hourDegrees = ((hours / 12) * 360) + 90;
     const minuteDegrees = ((minutes / 60) * 360) + 90;
@@ -18,7 +18,7 @@ function setTime() {
     const hourHand = document.querySelector('.hour');
     const minuteHand = document.querySelector('.minute');
     const secondHand = document.querySelector('.second');
-  
+  //animação dos ponteiros para ter o tempo certo para rotacionar de acordo como um relógio analógo original
     hourHand.style.transform = `rotate(${hourDegrees}deg)`;
     minuteHand.style.transform = `rotate(${minuteDegrees}deg)`;
     secondHand.style.transform = `rotate(${secondDegrees}deg)`;
